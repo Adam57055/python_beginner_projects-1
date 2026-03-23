@@ -9,7 +9,8 @@ num_input_letters= int(input("How many letters would you like in your password?\
 num_input_symbols = int(input(f"How many symbols would you like?\n"))
 num_input_numbers = int(input(f"How many numbers would you like?\n"))
  
-password = []
+password = [] #empty list program begins with
+#password is formed by randomized characters
 for char in range(1,num_input_letters+1):
     password.append(random.choice(letters))
 
@@ -19,10 +20,10 @@ for char in range(1,num_input_numbers+1):
 for char in range(1,num_input_symbols+1):
     password.append(random.choice(symbols))
 
-random.shuffle(password)
+random.shuffle(password) #password is mixed up
 
-final_password = ""
-for char in password:
-    final_password += char
+final_password = "" 
+for char in password: 
+    final_password += char #password is created from random characters
 
 print(f"your password is {final_password}")
