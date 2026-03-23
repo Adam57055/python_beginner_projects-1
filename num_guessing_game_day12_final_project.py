@@ -6,8 +6,8 @@ difficulty_level = input("choose a difficulty level type easy or hard as per you
 hard_lives = 5
 def hard_attempts():
     '''deals with the lives when difficulty is hard'''
-    global hard_lives
-    hard_lives = hard_lives - 1
+    global hard_lives #assigns global value
+    hard_lives = hard_lives - 1 
     return hard_lives
 
 easy_lives = 10
@@ -17,7 +17,7 @@ def easy_attempts():
     easy_lives -= 1
     return easy_lives
 
-answer = random.randint(1,100)
+answer = random.randint(1,100) #random number from 1-100
 
 game_running = True
 
@@ -38,7 +38,7 @@ def lives_over_hard():
     global game_running
     if hard_lives == 0:
         print(f"ohoho no you ran out of lives the answer was {answer} and you lost")
-        game_running = False
+        game_running = False #game stops
 
 
 def lives_over_easy():
@@ -46,7 +46,7 @@ def lives_over_easy():
     global game_running
     if easy_lives == 0:
         print(f"ohoho no you ran out of lives the answer was {answer} and you lost")
-        game_running = False        
+        game_running = False #game stops
 
 def high_low():
     '''checks for the answers and tells if the guessed answer is too high or too low'''
@@ -72,9 +72,3 @@ elif difficulty_level == 'easy':
         lives_over_easy()
 else:
     print("invalid input")
-
-
-
-
-
-
